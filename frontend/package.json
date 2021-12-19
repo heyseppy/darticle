@@ -14,10 +14,15 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.24.0",
+    "buefy": "^0.9.13",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-axios": "^3.4.0",
+    "vue-router": "^3.0.1",
+    "vuetify": "^2.6.1"
   },
   "devDependencies": {
+    "@nuxtjs/vuetify": "^1.12.3",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.1",
