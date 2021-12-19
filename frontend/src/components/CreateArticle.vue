@@ -3,32 +3,16 @@
     <h1>{{ msg }}</h1>
     <p class="title is-1">Welcome to <span class="title-color"> Darticle </span> </p>
     <p class="subtitle is-3">Secure, anonymous, and open-source article platform</p>
-    <center><br><br>
-    <figure class="image is-128x128">
-        <img src="https://cdn-icons-png.flaticon.com/512/337/337118.png">
-    </figure>
-    </center><br><br>
-
-    <b-button @click="createAuthor" type="is-link">Generate Author PIN</b-button>
-    <section v-if="authorKey"  class="section is-small">
-      <b-notification class="mw-10" ref="element" :closable="true">
-      Author: {{authorKey| truncate(40, '...')}}<br>
-      Reader: {{readerKey| truncate(40, '...')}}<br>
-      <b-button @click="copyKeys" type="is-danger">
-                Download Key
-            </b-button>
-    </b-notification>
+    <section class="section is-small">
+      <button class="button is-link is-light">Upload Your Author Key</button>
     </section>
-    <b-button tag="router-link"
-                to="/create" type="is-success">Write Article</b-button>
-    
   </div>
 </template>
 
 <script>
 import axios from 'axios'
 export default {
-  name: 'HomePage',
+  name: 'CreateDarticle',
   data () {
     return {
       msg: 'a project by @sepkimmy',
